@@ -1,0 +1,176 @@
+/* ------------------------------------------------------ */
+/*FRONT MESSAGE NOTIFCATION AND ITS BLUR*/
+.first_message_pop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70rem;
+    background-color: #f3f3f3;
+    padding: 2.5rem 2.5rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+.first_message_pop img {
+    width: 20rem;
+    height: 20rem;
+    margin-top: -1rem;
+}
+
+.first_message_pop div{
+    text-align: center;
+}
+
+.first_message_pop h2{
+    color: black;
+    text-align: center;
+}
+
+/* ------------ */
+.first_message_blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+/* ------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------ */
+/*OUR RESULTS MENU STYLE*/
+/*-------MODAL----------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.modal{
+    margin-bottom: 20px;
+    max-width:40rem;
+}
+
+.main_box_c{
+    background-color: #efefef;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70rem;
+    padding: 2.5rem 2.5rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+    margin: 1rem;
+}
+
+.pag-box{
+    margin-top: -.5rem;
+}
+
+.faraz_pagination button {
+    margin-left: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*-------Preview----------*/
+
+.preview__publisher, .preview__title{
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.preview{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pre_button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+/*-------X button----------*/
+.head_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+}
+.btn--close-modal {
+    font-family: inherit;
+    color: inherit;
+    font-size: 4rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin-top: -1rem;
+}
+/* ------------------------------------------------------ */
+/*Bring menu back generated fix*/
+.recipe__user-generated img {
+    width: 3rem;
+    padding: 0.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.preview__link {
+    margin: 0px;
+    width: 43rem;
+    margin-left: -2rem;
+}
+
+.name_website{
+    font-size: 2rem;
+    color: black;
+    margin-left: 2rem;
+    text-decoration: underline #bf2626;
+}
+
+.recipe {
+    background-color: black;
+}
+
+.nav__btn--bookmarks{
+    margin-right: 1.5rem;
+}
+
+.search-placeholder ::placeholder {
+    font-size: 1.5rem;
+}

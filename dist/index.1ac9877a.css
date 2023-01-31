@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 61.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  color: #615551;
+  min-height: calc(100vh - 8vw);
+  background-image: linear-gradient(to bottom right, #bf2626, #ee9700);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Nunito Sans, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 90rem;
+  min-height: 117rem;
+  background-color: #fff;
+  border-radius: 9px;
+  grid-template: "head head" 10rem
+                 "list recipe" minmax(100rem, auto)
+                 / 1fr 2fr;
+  margin: 4vw auto;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem .5rem #61555133;
+}
+
+@media only screen and (max-width: 78.15em) {
+  .container {
+    max-width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
+.btn--small, .btn--small:link, .btn--small:visited, .btn {
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #bf2626, #ee9700);
+  border: none;
+  border-radius: 10rem;
+  align-items: center;
+  transition: all .2s;
+  display: flex;
+}
+
+.btn--small:hover, .btn:hover {
+  transform: scale(1.05);
+}
+
+.btn--small:focus, .btn:focus {
+  outline: none;
+}
+
+.btn--small > :first-child, .btn > :first-child {
+  margin-right: 1rem;
+}
+
+.btn {
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btn svg {
+  height: 2.25rem;
+  width: 2.25rem;
+  fill: currentColor;
+}
+
+.btn--small, .btn--small:link, .btn--small:visited {
+  padding: 1.25rem 2.25rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn--small svg, .btn--small:link svg, .btn--small:visited svg {
+  height: 1.75rem;
+  width: 1.75rem;
+  fill: currentColor;
+}
+
+.btn--inline {
+  color: #000;
+  cursor: pointer;
+  background-color: #f9f5f3;
+  border: none;
+  border-radius: 10rem;
+  align-items: center;
+  padding: .8rem 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: all .2s;
+  display: flex;
+}
+
+.btn--inline svg {
+  height: 1.6rem;
+  width: 1.6rem;
+  fill: currentColor;
+  margin: 0 .2rem;
+}
+
+.btn--inline span {
+  margin: 0 .4rem;
+}
+
+.btn--inline:hover {
+  color: #ee9700;
+  background-color: #f2efee;
+}
+
+.btn--inline:focus {
+  outline: none;
+}
+
+.btn--round {
+  cursor: pointer;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-image: linear-gradient(to bottom right, #bf3626, #ee9700);
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+  display: flex;
+}
+
+.btn--round:hover {
+  transform: scale(1.07);
+}
+
+.btn--round:focus {
+  outline: none;
+}
+
+.btn--round svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: #fff;
+}
+
+.btn--tiny {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.btn--tiny svg {
+  height: 100%;
+  width: 100%;
+  fill: #000;
+  transition: all .3s;
+}
+
+.btn--tiny:focus {
+  outline: none;
+}
+
+.btn--tiny:hover svg {
+  fill: #ee9700;
+  transform: translateY(-1px);
+}
+
+.btn--tiny:active svg {
+  fill: #ee9700;
+  transform: translateY(0);
+}
+
+.btn--tiny:not(:last-child) {
+  margin-right: .3rem;
+}
+
+.heading--2 {
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.link:link, .link:visited {
+  color: #514c4b;
+}
+
+.spinner {
+  text-align: center;
+  margin: 5rem auto;
+}
+
+.spinner svg {
+  height: 6rem;
+  width: 6rem;
+  fill: #000;
+  animation: 2s linear infinite rotate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.message, .error {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  display: flex;
+}
+
+.message svg, .error svg {
+  height: 3rem;
+  width: 3rem;
+  fill: #000;
+  transform: translateY(-.3rem);
+}
+
+.message p, .error p {
+  margin-left: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.header {
+  grid-area: head;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  display: flex;
+}
+
+.header__logo {
+  height: 4.6rem;
+  margin-left: 4rem;
+  display: block;
+}
+
+.search {
+  width: 30rem;
+  background-color: #f5f2f2;
+  border-radius: 10rem;
+  align-items: center;
+  padding-left: 3rem;
+  transition: all .3s;
+  display: flex;
+}
+
+.search:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 .7rem 3rem #61555114;
+}
+
+.search__field {
+  color: inherit;
+  max-width: 20rem;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.7rem;
+}
+
+.search__field:focus {
+  outline: none;
+}
+
+.search__field::placeholder {
+  color: #767473;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 61.25em) {
+  .search__field {
+    width: auto;
+  }
+
+  .search__field::placeholder {
+    color: #767473;
+  }
+}
+
+.search__btn {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.nav {
+  align-self: stretch;
+  margin-right: 2.5rem;
+}
+
+.nav__list {
+  height: 100%;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__btn {
+  height: 100%;
+  color: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: none;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: all .3s;
+  display: flex;
+}
+
+.nav__btn svg {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #000;
+  margin-right: .7rem;
+  transform: translateY(-1px);
+}
+
+.nav__btn:focus {
+  outline: none;
+}
+
+.nav__btn:hover {
+  background-color: #f2efee;
+}
+
+.bookmarks {
+  z-index: 10;
+  width: 40rem;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+  padding: 1rem 0;
+  transition: all .5s .2s;
+  position: absolute;
+  right: -2.5rem;
+  box-shadow: 0 .8rem 5rem 2rem #6155511a;
+}
+
+.bookmarks__list {
+  list-style: none;
+}
+
+.bookmarks__field {
+  cursor: pointer;
+  height: 100%;
+  align-items: center;
+  padding: 0 4rem;
+  transition: all .3s;
+  display: flex;
+}
+
+.bookmarks__field:hover {
+  background-color: #f2efee;
+}
+
+.bookmarks:hover, .nav__btn--bookmarks:hover + .bookmarks {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=index.1ac9877a.css.map */
